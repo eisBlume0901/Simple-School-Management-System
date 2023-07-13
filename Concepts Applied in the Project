@@ -1,0 +1,100 @@
+abstract class Person
+- can initialize and get
+1. First name
+2. Last name
+3. Sex
+
+Concepts:
+Abstraction
+Enum
+Encapsulation
+Parametrized Constructor
+Getter
+Setter
+Polymorphism (Override)
+
+class Student extends Person implements Functionalities
+- can initialize and get
+1. Student number
+2. Grade book
+- can store data (grades)
+ 1. by processing a file, or
+ 2. through user input
+ - can display grade book
+ - can compute general weighted average
+ - can find grade
+ 1. through subject name
+ 2. through subject unit
+ - can reset grade book (emptying the grade book collection set)
+
+Concepts:
+Inheritance
+Implementation of an Interface (void and default methods)
+Encapsulation
+Constructor Overloading
+Lambda Expressions
+Getter
+File
+Polymorphism (Override)
+Reference equality set to value equality (Polymorphism, overriding equals() and hashCode() method
+
+class Teacher extends Person implements Functionalities
+- can initialize
+1. First name
+2. Last name
+- can store data (class list)
+1. by processing a file, or
+2. by manually input (batch), or
+3. add new student (single)
+- can display class list
+- can remove existing student
+- can find a student
+1. by its last name
+2. by its student number
+- can reset class list (emptying the class collection set)
+- can store grades
+1. by manually inputting (batch, multiple subjects in each students)
+2. by processing a file (single, one-subject only)
+- can display grade book
+- can reset grade book (emptying the grade book collection set)
+
+Concepts:
+Inheritance
+Implementation of an Interface (void and default methods)
+Encapsulation
+Constructor
+Getter
+File
+Lambda Expressions
+Polymorphism (Override)
+
+class Grade Book
+- can initialize and get
+1. Subject
+2. Grade
+3. Unit
+- can calculate gradeUnitProduct
+Concepts:
+Encapsulation
+Constructor
+Getters
+Return type methods
+Reference equality set to value equality (Polymorphism, overriding equals() and hashCode() method
+
+interface Functionalities
+- set a contract with Teacher and Student (this is done since there are common
+methods shared by them)
+- void methods
+storeData() - to store grades or student's information
+storeGrades() - to store grades
+- default and returnable methods
+detectSeparator(String fileAbsolutePath) - use for data cleaning by separating different types of data
+choice(int min, int max) - use for input validation to force user to choose a number that within a specified range
+grade(float min, float max, float step) - use for input validation to force user to put a correct format of grade
+
+Concepts:
+BufferedReader
+FileReader
+
+class UserInterface
+- purpose of this class is to have a friendly-user interface
