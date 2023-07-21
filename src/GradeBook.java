@@ -51,7 +51,7 @@ public class GradeBook
         if (!(obj instanceof GradeBook compared))
             return false;
 
-        return this.subject.equalsIgnoreCase(compared.getSubject()) &&
+        return this.subject.equalsIgnoreCase(compared.subject) &&
                 this.grade == compared.grade &&
                 this.unit == compared.unit;
     }
